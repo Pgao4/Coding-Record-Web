@@ -17,7 +17,7 @@ export default function Create() {
   
   const handleSubmit = (e) => {
     e.preventDefault()
-    postData({title, ingredients, method, cookingTime: cookingTime + 'minutes'})
+    postData({title, ingredients, method, cookingTime})
   }
 
   const handleAdd = (e) => {
@@ -41,10 +41,10 @@ export default function Create() {
 
   return (
     <div className='create'>
-      <h2 className="page-title">Add a New Recipe</h2>
+      <h2 className="page-title">Add a New Solution</h2>
       <form onSubmit={handleSubmit}>
         <label>
-          <span>Recipe Title:</span>
+          <span>Question Number and Title:</span>
           <input 
           type="text"
           onChange={(e) => setTitle(e.target.value)}
@@ -54,7 +54,7 @@ export default function Create() {
         </label>
 
         <label>
-          <span>Recipe ingredients:</span>
+          <span>Related Topics:</span>
           <div className="ingredients">
             <input 
             type="text" 
@@ -65,10 +65,10 @@ export default function Create() {
             <button className="btn" onClick={handleAdd}>add</button>
           </div>
         </label>
-        <p>Current ingredients: {ingredients.map(i => <em key={i}>{i}, </em>)}</p>
+        <p>Current topics: {ingredients.map(i => <em key={i}>{i}, </em>)}</p>
 
         <label>
-          <span>Recipe Method:</span>
+          <span>Your Solution:</span>
           <textarea 
             onChange={(e) => setMethod(e.target.value)}
             value={method}
@@ -77,9 +77,9 @@ export default function Create() {
         </label>
 
         <label>
-          <span>Cooking time (minutes):</span>
+          <span>Levels:</span>
           <input 
-            type="number" 
+            type="text" 
             onChange={(e) => setCookingTime(e.target.value)}
             value={cookingTime}
             required 

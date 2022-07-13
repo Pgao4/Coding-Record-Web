@@ -56,6 +56,16 @@
       "method": "Just fried them",
       "cookingTime": "20minutes",
       "id": "CVOiiBW"
+    },
+    {
+      "title": "1. Two Sum",
+      "ingredients": [
+        "Array",
+        "Hash Table"
+      ],
+      "method": "Use hashtable to solve it.",
+      "cookingTime": "Easy",
+      "id": "iVMkPzs"
     }
   ]
 }
