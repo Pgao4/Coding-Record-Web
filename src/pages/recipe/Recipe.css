@@ -6,6 +6,9 @@
     padding: 40px;
     box-sizing: border-box;
   }
+  .recipe p {
+    margin-bottom: 5px;
+  }
   .recipe ul {
     display: flex;
     padding: 0;
